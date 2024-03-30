@@ -8,7 +8,7 @@ az functionapp deployment source config-zip -g <resource_group> -n <app_name> --
 •	Azure VPN Gateway
 •	Network Security Groups (NSGs)
 •	Azure Bastion
-•	Configure your On-premises (Mikrotik ROS7)
+•	Configure your On-premises VPN Client in this case (Mikrotik ROS7)
 
 Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features:
 
@@ -21,10 +21,11 @@ o	az login
 
 o	In the Azure Portal, go to Virtual networks and click the + Add button.
 o	Fill in the required details:
-Name: Choose a unique name for your VNet.
-Region: Select the Azure region where you want to create the VNet.
-Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
-Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).
+
+- Name: Choose a unique name for your VNet.
+- Region: Select the Azure region where you want to create the VNet.
+- Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
+- Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).
 	Example Code (Azure CLI):
 	az network vnet create \
 	    --name MyVNet \
