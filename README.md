@@ -11,7 +11,7 @@ Instead of manually creating all the resources, you have the option to upload a 
 •	Azure Bastion
 •	Configure your On-premises VPN Client in this case (Mikrotik ROS7)
 
-Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features:
+Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
 
 1.	Log in to your Azure portal:
 
@@ -27,6 +27,7 @@ o	Fill in the required details:
 - Region: Select the Azure region where you want to create the VNet.
 - Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
 - Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).
+  
 	Example Code (Azure CLI):
 	az network vnet create \
 	    --name MyVNet \
@@ -38,9 +39,9 @@ o	Fill in the required details:
 
 2. Set Up an Azure VPN Gateway:
 
-Create a Gateway Subnet:
-Within your VNet, create a subnet specifically for the VPN Gateway.
-Configure an Azure VPN Gateway:
+	Create a Gateway Subnet:
+	Within your VNet, create a subnet specifically for the VPN Gateway.
+	Configure an Azure VPN Gateway:
 
 o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
