@@ -27,9 +27,7 @@ o	Fill in the required details:
 - Region: Select the Azure region where you want to create the VNet.
 - Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
 - Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).
-  
-	Example Code (Azure CLI):
-	az network vnet create
+  	*Example Code (Azure CLI):	az network vnet create
 
 	    --name MyVNet \
 	    --resource-group MyResourceGroup \
@@ -46,9 +44,7 @@ o	Fill in the required details:
 
 o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
-
-	Example Code (Azure CLI):
-	az network vnet-gateway create
+	*Example Code (Azure CLI):	az network vnet-gateway create
  
 	    --name MyVpnGateway \
 	    --resource-group MyResourceGroup \
@@ -61,9 +57,7 @@ o	Define the necessary settings, including the on-premises VPN device settings (
 	Create VMs within each subnet:
 
 o	For example, deploy a web server VM in the WebApp subnet, a database server in the Database subnet, and an admin server in the Admin subnet.
-
-	Example Code (Azure CLI):
-	az vm create
+	*Example Code (Azure CLI):	az vm create
  
 	    --resource-group MyResourceGroup \
 	    --name WebServer \
@@ -77,12 +71,10 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
 
 o	Define inbound and outbound rules to allow only necessary traffic.
 o	For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
-
-	Example Code (Azure CLI):
-	az network nsg create
+	*Example Code (Azure CLI):	az network nsg create
  
 	    --resource-group MyResourceGroup \
-	    --name WebAppNSG
+	    --name WebAppNSG \
 	
 	az network nsg rule create
  
