@@ -3,7 +3,8 @@ Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik (All fi
 
 Instead of manually creating all the resources, you have the option to upload a template.json file inside MyTemplate.zip using the following command onn Azure CLI:
 * The Resource Group "resource-group-name" must be created firt.
-    		az deployment group create --resource-group "resource-group-name" --template-file "path-to-template.json" 
+
+		az deployment group create --resource-group "resource-group-name" --template-file "path-to-template.json" 
 
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 
