@@ -39,7 +39,7 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 
 	    az network vnet create
   
-            --name MyVNet 
+  		--name MyVNet 
 	    --resource-group MyResourceGroup 
 	    --location eastus 
 	    --address-prefixes 10.0.0.0/16 
@@ -58,7 +58,7 @@ o	Define the necessary settings, including the on-premises VPN device settings (
  
 	    az network vnet-gateway create
      
-            --name MyVpnGateway 
+      --name MyVpnGateway 
 	    --resource-group MyResourceGroup 
 	    --vnet MyVNet 
 	    --public-ip-address MyPublicIP 
@@ -74,7 +74,7 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
  
 	    az vm create
      
-            --resource-group MyResourceGroup 
+      --resource-group MyResourceGroup 
 	    --name WebServer 
 	    --image UbuntuLTS 
 	    --admin-username azureuser 
@@ -91,7 +91,7 @@ o	For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other
  
 	    az network nsg create
      
-            --resource-group MyResourceGroup 
+      --resource-group MyResourceGroup 
 	    --name WebAppNSG 
 	
 	az network nsg rule create
