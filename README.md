@@ -1,7 +1,7 @@
 # Azure-AZ-104-Project
 Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik
 
-Instead you create manually aall the resources, you can upload MyTeamplate.zip with this command.
+Instead of manually creating all the resources, you have the option to upload a MyTemplate.zip file using the following command:
 
 - az deployment group create --resource-group <resource-group-name> --template-file <path-to-template>
 
