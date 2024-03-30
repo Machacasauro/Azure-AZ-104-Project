@@ -7,8 +7,10 @@ Instead of manually creating all the resources, you have the option to upload a 
 
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 
-- import file=IPsec-Config.rsc
 
+- function test() {
+    console.log("import file=IPsec-Config.rsc");
+}
 •Azure Virtual Networks
 
 •Azure VPN Gateway
