@@ -52,7 +52,7 @@ o	Define the necessary settings, including the on-premises VPN device settings (
 	    --public-ip-address MyPublicIP \
 	    --gateway-type Vpn \
 	    --vpn-type RouteBased \
-	    --sku VpnGw1
+	    --sku VpnGw2
 3. Deploy Test Resources (VMs):
 	Create VMs within each subnet:
 
@@ -66,6 +66,7 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
 	    --generate-ssh-keys \
 	    --vnet-name MyVNet \
 	    --subnet WebAppSubnet
+     
 4. Network Security Groups (NSGs):
 	Create NSGs for each subnet:
 
