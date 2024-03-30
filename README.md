@@ -3,11 +3,11 @@ Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik (All fi
 
 Instead of manually creating all the resources, you have the option to upload a MyTemplate.zip file using the following command onn Azure CLI:
 
-- az deployment group create --resource-group "resource-group-name" --template-file "path-to-template" \
+- az deployment group create --resource-group "resource-group-name" --template-file "path-to-template" 
 
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 
-- import file=IPsec-Config.rsc \
+- import file=IPsec-Config.rsc
 
 •Azure Virtual Networks
 
@@ -36,11 +36,11 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 - Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).  
   	*Example Code (Azure CLI):	az network vnet create
 
-	    --name MyVNet \
-	    --resource-group MyResourceGroup \
-	    --location eastus \
-	    --address-prefixes 10.0.0.0/16 \
-	    --subnet-name WebAppSubnet \
+	    --name MyVNet 
+	    --resource-group MyResourceGroup 
+	    --location eastus 
+	    --address-prefixes 10.0.0.0/16 
+	    --subnet-name WebAppSubnet 
 	    --subnet-prefixes 10.0.1.0/24
 
 2. Set Up an Azure VPN Gateway:
@@ -53,12 +53,12 @@ o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
 	*Example Code (Azure CLI):	az network vnet-gateway create
  
-	    --name MyVpnGateway \
-	    --resource-group MyResourceGroup \
-	    --vnet MyVNet \
-	    --public-ip-address MyPublicIP \
-	    --gateway-type Vpn \
-	    --vpn-type RouteBased \
+	    --name MyVpnGateway 
+	    --resource-group MyResourceGroup 
+	    --vnet MyVNet 
+	    --public-ip-address MyPublicIP 
+	    --gateway-type Vpn 
+	    --vpn-type RouteBased 
 	    --sku VpnGw2
 3. Deploy Test Resources (VMs):
 	Create VMs within each subnet:
@@ -66,12 +66,12 @@ o	Define the necessary settings, including the on-premises VPN device settings (
 o	For example, deploy a web server VM in the WebApp subnet, a database server in the Database subnet, and an admin server in the Admin subnet.
 	*Example Code (Azure CLI):	az vm create
  
-	    --resource-group MyResourceGroup \
-	    --name WebServer \
-	    --image UbuntuLTS \
-	    --admin-username azureuser \
-	    --generate-ssh-keys \
-	    --vnet-name MyVNet \
+	    --resource-group MyResourceGroup 
+	    --name WebServer 
+	    --image UbuntuLTS 
+	    --admin-username azureuser 
+	    --generate-ssh-keys 
+	    --vnet-name MyVNet 
 	    --subnet WebAppSubnet
      
 4. Network Security Groups (NSGs):
@@ -81,18 +81,18 @@ o	Define inbound and outbound rules to allow only necessary traffic.
 o	For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	az network nsg create
  
-	    --resource-group MyResourceGroup \
-	    --name WebAppNSG \
+	    --resource-group MyResourceGroup 
+	    --name WebAppNSG 
 	
 	az network nsg rule create
  
-	    --resource-group MyResourceGroup \
-	    --nsg-name WebAppNSG \
-	    --name AllowHTTP \
-	    --priority 100 \
-	    --source-address-prefixes '*' \
-	    --destination-port-ranges 80 \
-	    --access Allow \
+	    --resource-group MyResourceGroup 
+	    --nsg-name WebAppNSG 
+	    --name AllowHTTP 
+	    --priority 100 
+	    --source-address-prefixes '*' 
+	    --destination-port-ranges 80 
+	    --access Allow 
 	    --protocol Tcp
 
 5. Implement Azure Bastion:
