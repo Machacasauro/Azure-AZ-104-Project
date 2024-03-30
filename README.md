@@ -68,8 +68,6 @@ o	For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other
  
 	    az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
 	
-	az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
-
 5. Implement Azure Bastion:
 	Set up Azure Bastion:
 
