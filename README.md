@@ -1,36 +1,39 @@
 # Azure-AZ-104-Project
-Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik
+Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik (All files are located above.)
 
 Instead of manually creating all the resources, you have the option to upload a MyTemplate.zip file using the following command onn Azure CLI:
 
-- az deployment group create --resource-group <resource-group-name> --template-file <path-to-template> \
+- az deployment group create --resource-group "resource-group-name" --template-file "path-to-template" \
 
-Instead of manually bcreate all configurations in the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
+Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 
 - import file=IPsec-Config.rsc \
 
-•	Azure Virtual Networks
-•	Azure VPN Gateway
-•	Network Security Groups (NSGs)
-•	Azure Bastion
-•	Configure your On-premises VPN Client in this case (Mikrotik ROS7)
+•Azure Virtual Networks
+
+•Azure VPN Gateway
+
+•Network Security Groups (NSGs)
+
+•Azure Bastion
+
+•Configure your On-premises VPN Client in this case (Mikrotik ROS7)
 
 Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
 
 1.	Log in to your Azure portal:
 
 o	You can use the Azure CLI or the Azure Portal web interface. Here’s how you can do it using the Azure CLI:
-o	az login
+o	az login \ 
 
 2.	Navigate to Virtual networks and click + Add:
 
 o	In the Azure Portal, go to Virtual networks and click the + Add button.
-o	Fill in the required details:
 
 - Name: Choose a unique name for your VNet.
 - Region: Select the Azure region where you want to create the VNet.
 - Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
-- Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).
+- Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).  
   	*Example Code (Azure CLI):	az network vnet create
 
 	    --name MyVNet \
