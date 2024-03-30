@@ -2,7 +2,8 @@
 Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik
 
 Instead you create manually aall the resources, you can upload MyTeamplate.zip with this command.
-az functionapp deployment source config-zip -g <resource_group> -n <app_name> --src <zip_file_path>
+
+- az deployment group create --resource-group <resource-group-name> --template-file <path-to-template>
 
 •	Azure Virtual Networks
 •	Azure VPN Gateway
