@@ -64,7 +64,7 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
 5. Network Security Groups (NSGs):
 	Create NSGs for each subnet:
 
-o	Define inbound and outbound rules to allow only necessary traffic.For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
+o	Define inbound and outbound rules to allow only necessary traffic. For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	
  
 	   	 az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
@@ -74,13 +74,11 @@ and then
 6. Implement Azure Bastion:
 	Set up Azure Bastion:
 
-o	Azure Bastion provides secure RDP and SSH access to VMs without exposing them to the public internet.
-o	Ensure you have an SSH key for added security.
+o	Azure Bastion provides secure RDP and SSH access to VMs without exposing them to the public internet. Ensure you have an SSH key for added security.
 
 7. Configure a Recovery Vault:
 	Create a Recovery Services vault:
 
-o	Configure backup policies for VMs within your VNet.
-o	This ensures secure backups and reliable data recovery even if production servers are compromised.
+o	Configure backup policies for VMs within your VNet. This ensures secure backups and reliable data recovery even if production servers are compromised.
 
 Remember to replace placeholders like MyVNet, MyResourceGroup, and other specific values with your actual configuration.
