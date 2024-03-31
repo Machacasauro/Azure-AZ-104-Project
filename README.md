@@ -64,8 +64,7 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
 5. Network Security Groups (NSGs):
 	Create NSGs for each subnet:
 
-o	Define inbound and outbound rules to allow only necessary traffic.
-o	For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
+o	Define inbound and outbound rules to allow only necessary traffic.For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	
  
 	   	 az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
