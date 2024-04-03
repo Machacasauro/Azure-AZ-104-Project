@@ -23,7 +23,7 @@ Instead of manually create all configurations on the Mikrotik, you have the opti
 
 # Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
 
-## 1.	Log in to your Azure portal:
+### 1.	Log in to your Azure portal:
 
 o	You can use the Azure CLI or the Azure Portal web interface. Here’s how you can do it using the Azure CLI:
 
