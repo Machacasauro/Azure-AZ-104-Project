@@ -29,7 +29,7 @@ o	You can use the Azure CLI or the Azure Portal web interface. Here’s how you 
 
 > az login
     
-2.	Navigate to Virtual networks and click + Add:
+### 2.	Navigate to Virtual networks and click + Add:
 
 o	In the Azure Portal, go to Virtual networks and click the + Add button.
 
@@ -41,11 +41,8 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 
 > az network vnet create --name MyVNet --resource-group MyResourceGroup --location eastus --address-prefixes 10.0.0.0/16 --subnet-name WebAppSubnet --subnet-prefixes 10.0.1.0/24
 
-3. Set Up an Azure VPN Gateway:
-
-	Create a Gateway Subnet:
-	Within your VNet, create a subnet specifically for the VPN Gateway.
-	Configure an Azure VPN Gateway:
+### 3. Set Up an Azure VPN Gateway:Create a Gateway Subnet:
+Within your VNet, create a subnet specifically for the VPN Gateway.Configure an Azure VPN Gateway:
 
 o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
@@ -53,16 +50,16 @@ o	Define the necessary settings, including the on-premises VPN device settings (
  
 > az network vnet-gateway create --name MyVpnGateway --resource-group MyResourceGroup --vnet MyVNet --public-ip-address MyPublicIP --gateway-type Vpn --vpn-type RouteBased --sku VpnGw2
 		 
-4. Deploy Test Resources (VMs):
-	Create VMs within each subnet:
+### 4. Deploy Test Resources (VMs):
+Create VMs within each subnet:
 
 o	For example, deploy a web server VM in the WebApp subnet, a database server in the Database subnet, and an admin server in the Admin subnet.
 	*Example Code (Azure CLI):	
  
 > az vm create --resource-group MyResourceGroup --name WebServer --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --vnet-name MyVNet --subnet WebAppSubnet
      
-5. Network Security Groups (NSGs):
-	Create NSGs for each subnet:
+### 5. Network Security Groups (NSGs):
+Create NSGs for each subnet:
 
 o	Define inbound and outbound rules to allow only necessary traffic. For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	
@@ -72,13 +69,13 @@ o	Define inbound and outbound rules to allow only necessary traffic. For instanc
 and then
 	
 > az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
-6. Implement Azure Bastion:
-	Set up Azure Bastion:
+### 6. Implement Azure Bastion:
+Set up Azure Bastion:
 
 o	Azure Bastion provides secure RDP and SSH access to VMs without exposing them to the public internet. Ensure you have an SSH key for added security.
 
-7. Configure a Recovery Vault:
-	Create a Recovery Services vault:
+### 7. Configure a Recovery Vault:
+Create a Recovery Services vault:
 
 o	Configure backup policies for VMs within your VNet. This ensures secure backups and reliable data recovery even if production servers are compromised.
 
