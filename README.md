@@ -21,7 +21,7 @@ Instead of manually create all configurations on the Mikrotik, you have the opti
 
 •Configure your On-premises VPN Client in this case (Mikrotik ROS7)
 
-Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
+# Let’s break down the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
 
 1.	Log in to your Azure portal:
 
