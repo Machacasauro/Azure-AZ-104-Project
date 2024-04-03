@@ -67,10 +67,10 @@ o	For example, deploy a web server VM in the WebApp subnet, a database server in
 o	Define inbound and outbound rules to allow only necessary traffic. For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	
  
-	   	 az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
+git az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
 and then
 	
-		az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
+git az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
 6. Implement Azure Bastion:
 	Set up Azure Bastion:
 
