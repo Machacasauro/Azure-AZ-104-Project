@@ -1,10 +1,5 @@
 <pre><code class="language-css">
-.some-box {
-    width: 20px;
-    height: 20px;
-    background: black;
-    margin-bottom: 1.5rem;
-}
+
 </code></pre>
 
 # Azure-AZ-104-Project
@@ -17,9 +12,9 @@ It is necessary to create the Resource Group 'resource-group-name' first 😊
 > az deployment group create --resource-group "resource-group-name" --template-file "path-to-template\template.json"
 
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
-
+<pre><code class="language-css">
 > import file=IPsec-Config.rsc
-
+</code></pre>
 •Azure Virtual Networks
 
 •Azure VPN Gateway
