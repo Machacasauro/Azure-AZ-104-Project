@@ -39,7 +39,7 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 - Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).  
   	*Example Code (Azure CLI):	
 
-az network vnet create --name MyVNet --resource-group MyResourceGroup --location eastus --address-prefixes 10.0.0.0/16 --subnet-name WebAppSubnet --subnet-prefixes 10.0.1.0/24
+> network vnet create --name MyVNet --resource-group MyResourceGroup --location eastus --address-prefixes 10.0.0.0/16 --subnet-name WebAppSubnet --subnet-prefixes 10.0.1.0/24
 
 3. Set Up an Azure VPN Gateway:
 
