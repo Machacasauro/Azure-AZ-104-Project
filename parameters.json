@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "bastionHosts_Bastio_SSH_name": {
+            "value": null
+        },
+        "connections_VNet1toSite1_name": {
+            "value": null
+        },
+        "localNetworkGateways_Site1_name": {
+            "value": null
+        },
+        "publicIPAddresses_VNet1GWpip_name": {
+            "value": null
+        },
+        "vaults_RecoveryVault_name": {
+            "value": null
+        },
+        "virtualNetworkGateways_VNet1GW_name": {
+            "value": null
+        },
+        "virtualMachines_Project_AZ104_Ubuntu_name": {
+            "value": null
+        },
+        "sshPublicKeys_Project_AZ104_Ubuntu_key_name": {
+            "value": null
+        },
+        "networkInterfaces_project_az104_ubuntu994_name": {
+            "value": null
+        },
+        "publicIPAddresses_Project_AZ104_Ubuntu_ip_name": {
+            "value": null
+        },
+        "virtualNetworks_Project_AZ104_Ubuntu_vnet_name": {
+            "value": null
+        },
+        "networkSecurityGroups_Project_AZ104_Ubuntu_nsg_name": {
+            "value": null
+        }
+    }
+}
