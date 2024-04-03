@@ -5,11 +5,11 @@ Instead of manually creating all the resources, you have the option to upload a 
 
 It is necessary to create the Resource Group 'resource-group-name' first 😊
 
-az deployment group create --resource-group "resource-group-name" --template-file "path-to-template\template.json"
+git az deployment group create --resource-group "resource-group-name" --template-file "path-to-template\template.json"
 
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 
-import file=IPsec-Config.rsc
+git import file=IPsec-Config.rsc
 
 •Azure Virtual Networks
 
@@ -27,7 +27,7 @@ import file=IPsec-Config.rsc
 
 o	You can use the Azure CLI or the Azure Portal web interface. Here’s how you can do it using the Azure CLI:
 
-az login
+git az login
     
 2.	Navigate to Virtual networks and click + Add:
 
@@ -51,7 +51,7 @@ o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
 	*Example Code (Azure CLI):	
  
-az network vnet-gateway create --name MyVpnGateway --resource-group MyResourceGroup --vnet MyVNet --public-ip-address MyPublicIP --gateway-type Vpn --vpn-type RouteBased --sku VpnGw2
+git az network vnet-gateway create --name MyVpnGateway --resource-group MyResourceGroup --vnet MyVNet --public-ip-address MyPublicIP --gateway-type Vpn --vpn-type RouteBased --sku VpnGw2
 		 
 4. Deploy Test Resources (VMs):
 	Create VMs within each subnet:
@@ -59,7 +59,7 @@ az network vnet-gateway create --name MyVpnGateway --resource-group MyResourceGr
 o	For example, deploy a web server VM in the WebApp subnet, a database server in the Database subnet, and an admin server in the Admin subnet.
 	*Example Code (Azure CLI):	
  
-az vm create --resource-group MyResourceGroup --name WebServer --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --vnet-name MyVNet --subnet WebAppSubnet
+git az vm create --resource-group MyResourceGroup --name WebServer --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --vnet-name MyVNet --subnet WebAppSubnet
      
 5. Network Security Groups (NSGs):
 	Create NSGs for each subnet:
@@ -67,10 +67,11 @@ az vm create --resource-group MyResourceGroup --name WebServer --image UbuntuLTS
 o	Define inbound and outbound rules to allow only necessary traffic. For instance, allow HTTP/HTTPS traffic to the WebApp subnet and restrict other protocols.
 	*Example Code (Azure CLI):	
  
-az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
+git az network nsg create --resource-group MyResourceGroup --name WebAppNSG 
+
 and then
 	
-az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
+git az network nsg rule create --resource-group MyResourceGroup --nsg-name WebAppNSG --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
 6. Implement Azure Bastion:
 	Set up Azure Bastion:
 
