@@ -17,13 +17,13 @@ Instead of manually create all configurations on the Mikrotik, you have the opti
 ```css
 import file=IPsec-Config.rsc
 ```
-•Azure Virtual Networks
-
-•Azure VPN Gateway
-
-•Network Security Groups (NSGs)
-
-•Azure Bastion
+* Azure Virtual Networks
+* Azure VPN Gateway
+* Network Security Groups (NSGs)
+* Azure Bastion
+* Azure Private Link
+* Azure DNS
+* Azure Load Balancer
 
 •Configure your On-premises VPN Client, in this case (Mikrotik ROS7)
 
