@@ -6,7 +6,7 @@ Instead of manually creating all the resources, you have the option to upload a 
 It is necessary to create the Resource Group 'resource-group-name' first 😊
 
 ```css
-az deployment group create --resource-group "resource-group-name" --template-file "path-to-template/template.json"
+az deployment group create --resource-group "resource-group-name" --template-file "path-to-template\template.json"
 ```
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 ```css
