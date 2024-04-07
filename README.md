@@ -3,8 +3,11 @@ Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik (All fi
 
 Instead of manually creating all the resources, you have the option to upload a template.json file using the following command on Azure CLI:
 
-It is necessary to create the Resource Group 'resource-group-name' first 😊
-
+It is necessary to create the Resource Group first 😊
+```css
+az group create -l "MyLocation" -n "resource-group-name"
+```
+and then
 ```css
 az deployment group create --resource-group "resource-group-name" --template-file "path-to-template\template.json"
 ```
