@@ -24,8 +24,7 @@ import file=IPsec-Config.rsc
 * Azure Private Link
 * Azure DNS
 * Azure Load Balancer
-
-•Configure your On-premises VPN Client, in this case (Mikrotik ROS7)
+* Configure your On-premises VPN Client, in this case (Mikrotik ROS7)
 
 # The following steps are necessary to set up an Azure Virtual Network (VNet) with the features mentioned above:
 
