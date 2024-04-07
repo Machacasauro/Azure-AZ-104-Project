@@ -86,6 +86,6 @@ az backup vault create --resource-group "MyResourceGroup" --name "MyRecoveryVaul
 ```
 o	Configure backup policies for VMs within your VNet. This ensures secure backups and reliable data recovery even if production servers are compromised.
 ```css
-az backup protection enable-for-vm --resource-group MyResourceGroup --vault-name MyRecoveryVault --vm MyVM --policy-name DefaultPolicy
+az backup protection enable-for-vm --resource-group "MyResourceGroup" --vault-name "MyRecoveryVault" --vm "MyVM" --policy-name DefaultPolicy
 ```
 ### Remember to replace placeholders like "MyVNet", "MyResourceGroup", and other specific values with your actual configuration.
