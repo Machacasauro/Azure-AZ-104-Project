@@ -75,13 +75,17 @@ and then
 az network nsg rule create --resource-group "MyResourceGroup" --nsg-name "WebAppNSG" --name AllowHTTP --priority 100 --source-address-prefixes '*' --destination-port-ranges 80 --access Allow  --protocol Tcp
 ```
 ### 6. Implement Azure Bastion:
-
-
+```css
+az network bastion create --name MyBastion --public-ip-address MyPublicIP --resource-group MyResourceGroup --vnet-name MyVNet
+```
 o	Azure Bastion provides secure RDP and SSH access to VMs without exposing them to the public internet. Ensure you have an SSH key for added security.
 
 ### 7. Configure a Recovery Vault:
-
-
+```css
+az backup vault create --resource-group MyResourceGroup --name MyRecoveryVault --location eastus
+```
 o	Configure backup policies for VMs within your VNet. This ensures secure backups and reliable data recovery even if production servers are compromised.
-
+```css
+az backup protection enable-for-vm --resource-group MyResourceGroup --vault-name MyRecoveryVault --vm MyVM --policy-name DefaultPolicy
+```
 ### Remember to replace placeholders like "MyVNet", "MyResourceGroup", and other specific values with your actual configuration.
