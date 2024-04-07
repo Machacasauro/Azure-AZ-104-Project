@@ -42,7 +42,7 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 ```css
 az network vnet create --name MyVNet --resource-group MyResourceGroup --location eastus --address-prefixes 10.0.0.0/16 --subnet-name WebAppSubnet --subnet-prefixes 10.0.1.0/24
 ```
-### 3. Set Up an Azure VPN Gateway:Create a Gateway Subnet:
+### 3. Set Up an Azure VPN Gateway:
 
 o	Use the Azure Portal or Azure CLI to create an Azure VPN Gateway.
 o	Define the necessary settings, including the on-premises VPN device settings (IP address, shared key, etc.).
