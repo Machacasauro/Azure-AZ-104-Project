@@ -27,7 +27,7 @@ import file=IPsec-Config.rsc
 
 •Configure your On-premises VPN Client, in this case (Mikrotik ROS7)
 
-# This are the steps for setting up an Azure Virtual Network (VNet) with the mentioned features above:
+# The following steps are necessary to set up an Azure Virtual Network (VNet) with the features mentioned above:
 
 ### 1.	Log in to your Azure portal:
 
