@@ -13,6 +13,7 @@ az deployment group create --resource-group "resource-group-name" --template-fil
 ```
 or
 Enter in https://portal.azure.com/#create/Microsoft.Template and deploy the file via GUI Azure portal interface.
+
 Instead of manually create all configurations on the Mikrotik, you have the option to upload a IPsec-Config.rsc file using the following command on terminal:
 ```css
 import file=IPsec-Config.rsc
