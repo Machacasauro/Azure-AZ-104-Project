@@ -1,4 +1,4 @@
-# Azure-AZ-104-Project
+# Azure AZ-104 Virtaul Networking and VPN (IPsec/IKEv2)
 Implement and manage virtual networking and VPN Ipsec/IKv2 with Mikrotik (All files are located above.)
 
 Instead of manually creating all the resources, you have the option to upload a template.json file using the following command on Azure CLI:
