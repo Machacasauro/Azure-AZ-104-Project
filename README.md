@@ -41,8 +41,7 @@ o	In the Azure Portal, go to Virtual networks and click the + Add button.
 - Name: Choose a unique name for your VNet.
 - Region: Select the Azure region where you want to create the VNet.
 - Address space (CIDR block): Define the IP address range for your VNet (e.g., 10.0.0.0/16).
-- Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin).  
-  	*Example Code (Azure CLI):	
+- Subnet ranges: Create subnets within the VNet for different purposes (e.g., WebApp, Database, Admin). 	
 ```css
 az network vnet create --name "MyVNet" --resource-group "MyResourceGroup" --location eastus --address-prefixes 10.0.0.0/16 --subnet-name "WebAppSubnet" --subnet-prefixes 10.0.1.0/24
 ```
